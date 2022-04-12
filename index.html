@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,400;0,700;1,400;1,700&family=Flamenco&family=Oswald:wght@400;700&display=swap" rel="stylesheet">
+<style>
+*, :after, :before {
+	box-sizing: border-box;
+}
+html {
+	margin: 0;
+	padding: 0;
+}
+body {
+	margin: 0 auto;
+	text-align: center;
+	font-size: 1rem;
+	color: #333;
+	font-family: 'Barlow Condensed', sans-serif;
+	/*font-family: 'Oswald', sans-serif;*/
+}
+h1, h2, h3 {
+	font-family: 'Flamenco', cursive;
+	padding-top: 2rem;
+	padding-bottom: 0;
+	font-weight: bold;
+	line-height: 1.2;
+	margin: 0;
+	text-align: left;
+}
+h1 {
+	font-size: 2.5rem;
+	text-shadow: 0.05rem 0 0 #333;
+	text-decoration: underline;
+}
+h2 {
+	font-size: 2rem;
+}
+h3 {
+	font-size: 1.5rem;
+}
+ol, ul {
+	padding-left: 2rem;
+	margin: 0;
+	padding-bottom: 1rem;
+}
+a {
+	text-decoration: underline;
+	text-decoration-thickness: 0.05rem;
+}
+aside, main {
+	margin: 0;
+	padding: 0.5rem 0.5rem 0;
+	display: inline-block;
+	max-width: 100%;
+	text-align: left;
+	vertical-align: top;
+}
+aside {
+	width: 30rem;
+}
+main {
+	width: 44rem;
+}
+
+#skills > div.skill-tags {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	gap: 0.5rem 0.4rem;
+}
+#skills > div.skill-tags:after {
+	content: '';
+	flex: auto;
+}
+#skills input[type=checkbox] {
+	display: none;
+}
+#skills span {
+	display: inline-block;
+	border-radius: .25rem;
+	border: 1px solid #ccc;
+	padding: 0 .5rem .125rem;
+	cursor: pointer;
+}
+#skills input[type=checkbox]:checked + span {
+	background-color: #666;
+	border-color: #666;
+	color: white;
+}
+#skills input[type=checkbox]:not(:checked) + span:hover {
+	border-color: #333;
+	background-color: #eee;
+	color: #000;
+}
+#skills input[type=checkbox]:checked + span:hover {
+	border-color: #333;
+	color: #eee;
+}
+
+section, li {
+	transform:  perspective(1rem) translateZ(-20rem) rotateX(90deg);
+	transition: transform .5s, max-height .5s ease-in;
+	transform-origin: top;
+	max-height: 0;
+	overflow: visible;
+	padding-left: 4rem;
+	position: relative;
+	--max-height: 20rem;
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility:    hidden;
+	-ms-backface-visibility:     hidden;
+}
+section[id], li {
+	padding-left: 0;
+}
+main > section {
+	padding-bottom: 1rem;
+	--max-height: 9999rem;
+}
+
+body.backend    .backend,
+body.c\+\+      .c\+\+,
+body.design     .design,
+body.dft        .dft,
+body.fortran    .fortran,
+body.frontend   .frontend,
+body.git        .git,
+body.java       .java,
+body.javascript .javascript,
+body.joomla     .joomla,
+body.lua        .lua,
+body.math       .math,
+body.ml         .ml,
+body.openmp     .openmp,
+body.pandoc     .pandoc,
+body.php        .php,
+body.phpstorm   .phpstorm,
+body.physics    .physics,
+body.python     .python,
+body.research   .research,
+body.tex        .tex,
+body.typescript .typescript,
+body.wordpress  .wordpress,
+body:not(.support-js) *,
+.global {
+	transform: none;
+	transition: transform .5s, max-height .5s ease-out;
+	max-height: var(--max-height);
+}
+section > h3 > span {
+	position: absolute;
+	width: 3.5rem;
+	left: 0;
+	top: 2.1rem;
+	word-break: break-word;
+	font-size: 1.4rem;
+	line-height: 1;
+	font-family: 'Barlow Condensed', sans-serif;
+	/*font-family: 'Oswald', sans-serif;*/
+}
+div.tags {
+	font-size: smaller;
+	font-style: italic;
+}
+
+	
+</style>
+</head>
+<body><aside>
+	<h1>Denis Ryabov</h1>
+	<div id="about">
+		<h2>About</h2>
+		<p>Fun of programming and researching.</p>
+		<table>
+			<tr><td><b>Email</b>:</td><td><a href="mailto:dryabov@yandex.ru">dryabov@yandex.ru</a></td></tr>
+			<tr><td><b>Address</b>:</td><td>Rostov-on-Don, Russia</td></tr>
+		</table>
+	</div>
+	<div id="skills">
+		<h2>Skills</h2>
+		<p>Select skills you are interested to see more details:</p>
+		<div class="skill-tags">
+		<label><input type="checkbox"><span>backend</span></label>
+		<label><input type="checkbox"><span>c++</span></label>
+		<label><input type="checkbox"><span>design</span></label>
+		<label><input type="checkbox"><span>dft</span></label>
+		<!--label><input type="checkbox"><span>flask</span></label-->
+		<label><input type="checkbox"><span>fortran</span></label>
+		<label><input type="checkbox"><span>frontend</span></label>
+		<label><input type="checkbox"><span>git</span></label>
+		<label><input type="checkbox"><span>java</span></label>
+		<label><input type="checkbox"><span>javascript</span></label>
+		<label><input type="checkbox"><span>joomla</span></label>
+		<label><input type="checkbox"><span>lua</span></label>
+		<label><input type="checkbox"><span>math</span></label>
+		<label><input type="checkbox"><span>ml</span></label>
+		<label><input type="checkbox"><span>openmp</span></label>
+		<label><input type="checkbox"><span>pandoc</span></label>
+		<label><input type="checkbox"><span>php</span></label>
+		<label><input type="checkbox"><span>phpstorm</span></label>
+		<label><input type="checkbox"><span>physics</span></label>
+		<!--label><input type="checkbox"><span>python</span></label-->
+		<label><input type="checkbox"><span>research</span></label>
+		<label><input type="checkbox"><span>tex</span></label>
+		<!--label><input type="checkbox"><span>typescript</span></label-->
+		<label><input type="checkbox"><span>wordpress</span></label>
+		</div>
+	</div>
+</aside><main>
+	<section id="work">
+		<h2>Work</h2>
+		<section class="global">
+			<h3><span>2010–pr.</span> Sole proprietorship</h3>
+			<div>Work on different own and 3rd-party IT projects.</div>
+		</section>
+		<section class="global">
+			<h3><span>2003–pr.</span> Southern Federal University</h3>
+			<div><i>Senior researcher</i></div>
+			<div>Scientific research in the fields of nonlinear dynamics and condense matter physics.</div>
+		</section>
+		<section class="global">
+			<h3><span>2011–2018</span> Kuneri Ltd.</h3>
+			<div><i>Lead Developer</i></div>
+			<div>Worked as a contractor, developed MobileJoomla, PageSpeed Ninja, and other projects.</div>
+		</section>
+	</section>
+	<section id="projects">
+		<h2>Projects</h2>
+		<section class="joomla">
+			<h3><span>2022–pr.</span> Joomla! Extension Directory Team</h3>
+			<div>Official member of the JED team, working on the JED Checker extension.</div>
+		</section>
+		<section class="joomla php git">
+			<h3><span>2019-pr.</span> JED Checker contributor</h3>
+			<div>JED Checker is a code to validate Joomla! extensions before submitting to the official Joomla! Extension Directory. I've implemented new design, upgraded code to support Joomla!4.x, and added many new checks: validation of XML manifest files, language translation files, warning on usage of deprecated API, etc.</div>
+		</section>
+		<section class="wordpress php frontend backend">
+			<h3><span>2017–pr.</span> PageSpeed Ninja</h3>
+			<div>Development of WordPress extension for frontend performance optimization.</div>
+		</section>
+		<section class="joomla">
+			<h3><span>2007–pr.</span> Russian Joomla! Community</h3>
+			<div>Active member and global moderator of the <a href="https://joomlaforum.ru/">Russian Joomla! Community</a> website.</div>
+		</section>
+		<section class="joomla php backend frontend">
+			<h3><span>2009–pr.</span> MobileJoomla</h3>
+			<div>Development of the MobileJoomla extension to adapt and optimize website for mobile phones.</div>
+		</section>
+
+		<section class="fortran physics math research openmp">
+			<h3><span>2017–2018</span> NBODY6 contributor</h3>
+			<div>Developed code for parallel calculation of binary systems in the NBODY6 code by Sverre Aarseth.</div>
+		</section>
+		<section class="joomla tex pandoc lua design">
+			<h3><span>2015–2021</span> Mobile Joomla Insider's Guide</h3>
+			<div>A beautiful book made with Pandoc, LaTeX, and a set of Lua scripts.</div>
+		</section>
+		<section class="php phpstorm java git">
+			<h3><span>2015–2021</span> PHP RegExp Support plugin</h3>
+			<div>Development of <a href="https://github.com/dryabov/phpregexp">PHP RegExp Support</a> <a href="https://plugins.jetbrains.com/plugin/7746">plugin</a> for PhpStorm.</div>
+		</section>
+		<section class="php phpstorm git">
+			<h3><span>2015–2021</span> PhpStorm Stubs</h3>
+			<div>Fixed annotations for some builtin PHP functions and global variables.</div>
+			<div>Analyzed sources (C language) of the <i>imagick</i> extension and updated PHP stub file correspondingly (marked deprecated methods and thrown exceptions).</div>
+		</section>
+		<section class="php phpstorm git java">
+			<h3><span>2015</span> PHP Inspections EA contributor</h3>
+			<div>Contributed and suggested ideas for PHP Inspections EA plugin for PhpStorm.</div>
+		</section>
+		<section class="javascript git frontend">
+			<h3><span>2013–2021</span> LazyLoadXT</h3>
+			<div>Extendible <a href="https://github.com/ressio/lazy-load-xt">jQuery plugin</a> for lazy image/video/iframe loading and other features like infinite scroll support, etc. </div>
+		</section>
+		<section class="tex git">
+			<h3><span>2011–2020</span> rmathbr</h3>
+			<div>Development of the rmathbr package for LaTeX.</div>
+		</section>
+		<section class="c++ openmp math">
+			<h3><span>2008-2014</span> Normal Forms</h3>
+			<div>Development of C++ library for calculation of Hamiltonian normal form (parallelized, multi-precision, memory-efficient code).</div>
+		</section>
+		<section class="joomla php backend">
+			<h3><span>2007–2008</span> PDAbot</h3>
+			<div>Development of an extension for Joomla! CMS to adapt website for mobile phones.</div>
+		</section>
+		<section class="joomla php git">
+			<h3><span>2006–2015</span> RusTypo</h3>
+			<div>Development of the Joomla! plugin for Russian typography improvements.</div>
+		</section>
+	</section>
+	<section id="awards">
+		<h2>Awards</h2>
+		<section class="math ml">
+			<h3><span>2011</span> Relevance Prediction Challenge</h3>
+			<div>Winner (the 3rd place) of the international "<a href="http://imat-relpred.yandex.ru/en/">Relevance Prediction Challenge</a>" contest by Yandex. The random forest method was used to predict relevance of links to user requests.</div>
+		</section>
+		<section class="math ml">
+			<h3><span>2010</span> Internet Mathematics-2010</h3>
+			<div>Winner (the 1st place) of the all-Russian "<a href="http://imat2010.yandex.ru/">Internet mathematics 2010</a>" contest by Yandex. The task was to predict future traffic jams from known historic data.</div>
+		</section>
+		<section class="physics">
+			<h3><span>2004</span> Dynasty Foundation</h3>
+			<div>The <a href="http://www.dynastyfdn.com/programs/education/laureates/students?page=6">awardee</a> of the Dynasty foundation scholarships for student-physicists.</div>
+		</section>
+	</section>
+
+	<section id="education" class="global">
+		<h2>Education</h2>
+		<section class="global">
+			<h3><span>2009</span> PhD</h3>
+			<div>Southern Federal University</div>
+		</section>
+		<section class="global">
+			<h3><span>2005</span> MSc</h3>
+			<div>Rostov State University</div>
+		</section>
+		<section class="global">
+			<h3><span>2003</span> BSc</h3>
+			<div>Rostov State University</div>
+		</section>
+	</section>
+
+	<section id="publications">
+		<h2>Publications</h2>
+		<ul>
+			<li class="research math physics">G.M. Chechin, D.S. Ryabov. <a href="https://doi.org/10.22226/2410-3535-2020-4-523-534">Introduction to the theory of bushes of nonlinear normal modes for studying large-amplitude atomic vibrations in systems with discrete symmetry</a> // Letters on materials 10 (2020) 523.</li>
+			<li class="research math physics">D.S. Ryabov <i>et al.</i> <a href="https://doi.org/10.1007/s11071-020-06015-5">Delocalized nonlinear vibrational modes of triangular lattices</a> // Nonlinear Dynamics 102 (2020) 2793.</li>
+			<li class="research math physics">E.A. Korznikova <i>et al.</i> <a href="https://doi.org/10.1002/pssb.201800061">Delocalized Nonlinear Vibrational Modes in Graphene: Second Harmonic Generation and Negative Pressure</a> // Physica Status Solidi B Basic Research, 256 (2019) 1800061.</li>
+			<li class="research math physics dft">G. Chechin <i>et al.</i> <a href="https://doi.org/10.1142/S2424913018500029">Large-amplitude periodic atomic vibrations in diamond</a> // Journal of Micromechanics and Molecular Physics 03 (2018) 1850002.</li>
+			<li class="research math physics dft">G. Chechin <i>et al.</i> <a href="https://doi.org/10.22226/2410-3535-2017-4-367-372">Large-amplitude in-plane atomic vibrations in strained graphene monolayer: bushes of nonlinear normal modes</a> // Letters on materials 7 (2017) 367.</li>
+			<li class="research math physics dft">G. Chechin <i>et al.</i> <a href="https://doi.org/10.22226/2410-3535-2016-1-9-15">Nonlinear vibrational modes in graphene: group-theoretical results</a> // Letters on materials 6 (2016) 9.</li>
+			<li class="javascript frontend"><a href="https://www.smashingmagazine.com/2015/02/redefining-lazy-loading-with-lazy-load-xt/l">Redefining Lazy Loading With Lazy Load XT</a> // Smashing Magazine (2015).</li>
+			<li class="joomla"><a href="https://www.mobilejoomla.com/extension/documentation/mobile-joomla-insiders-guide.html">Mobile Joomla Insider's Guide</a> (2015).</li>
+			<li class="research math physics dft">G. Chechin <i>et al.</i> <a href="https://doi.org/10.1103/PhysRevE.92.012907">Nonlinear normal mode interactions in the SF<sub>6</sub> molecule studied with the aid of density functional theory</a> // Phys. Rev. E 92 (2015) 012907.</li>
+			<li class="research math physics dft">G.M. Chechin <i>et al.</i> <a href="https://doi.org/10.1103/PhysRevB.90.045432">Properties of discrete breathers in graphane from ab initio simulations</a> // Phys. Rev. B 90 (2014) 045432.</li>
+			<li class="research math physics">G.M. Chechin, D.S. Ryabov. <a href="https://doi.org/10.1103/PhysRevE.85.056601">Stability of nonlinear normal modes in the Fermi-Pasta-Ulam β chain in the thermodynamic limit</a> // Phys. Rev.E 85 (2012) 056601.</li>
+			<li class="joomla php frontend backend"><a href="http://mobiforge.com/developing/story/mobile-sites-with-joomla-cms">Mobile Sites with Joomla! CMS</a> // dev.mobi (2008).</li>
+			<li class="research math physics">G.M. Chechin <i>et al.</i> <a href="https://doi.org/10.1016/j.physd.2005.03.009">Stability of low-dimensional bushes of vibrational modes in the Fermi Pasta Ulam chains</a> // Physica D 203 (2005) 121.</li>
+			<li class="research math physics">G.M. Chechin, D.S. Ryabov. <a href="https://doi.org/10.1103/PhysRevE.69.036202">Three-dimensional chaotic flows with discrete symmetries</a> // Phys. Rev. E 69 (2004) 036202.</li>
+		</ul>
+	</section>
+</main></body>
+<script>
+	document.body.classList.add('support-js');
+
+	document.addEventListener('DOMContentLoaded', function () {
+
+		[...document.querySelectorAll('section section')].forEach(el => {
+			const classes = Array.from(el.classList.values());
+			el.parentElement.classList.add(...classes);
+			if (!el.classList.contains('global') && classes.length > 0) {
+				const tags = document.createElement('div');
+				tags.className = 'tags';
+				tags.innerText = '#' + classes.join(' #');
+				el.appendChild(tags);
+			}
+		});
+
+		const publications = document.getElementById('publications');
+		[...publications.getElementsByTagName('li')].forEach(el => publications.classList.add(...el.classList.values()));
+
+		const skills = document.getElementById('skills');
+		skills.addEventListener('change', function () {
+			const add = [], remove = [];
+			[...skills.getElementsByTagName('input')].forEach(el => (el.checked ? add : remove).push(el.parentElement.innerText.toLowerCase()));
+			add.length    && document.body.classList.add(...add);
+			remove.length && document.body.classList.remove(...remove);
+		});
+		
+		// @todo get tags list from anchor
+	});
+</script>
+</html>
