@@ -128,18 +128,21 @@ main > section {
 }
 
 body.backend    .backend,
+body.blockchain .blockchain,
 body.c\+\+      .c\+\+,
 body.design     .design,
 body.dft        .dft,
 body.fortran    .fortran,
 body.frontend   .frontend,
-body.git        .git,
+body.idea       .idea,
 body.java       .java,
 body.javascript .javascript,
 body.joomla     .joomla,
+body.kotlin     .kotlin,
 body.lua        .lua,
 body.math       .math,
 body.ml         .ml,
+body.nodejs     .nodejs,
 body.openmp     .openmp,
 body.pandoc     .pandoc,
 body.php        .php,
@@ -148,6 +151,7 @@ body.physics    .physics,
 body.python     .python,
 body.research   .research,
 body.tex        .tex,
+body.torrent    .torrent,
 body.typescript .typescript,
 body.wordpress  .wordpress,
 body:not(.support-js) *,
@@ -190,19 +194,22 @@ div.tags {
 		<p>Select skills you are interested to see more details:</p>
 		<div class="skill-tags">
 		<label><input type="checkbox"><span>backend</span></label>
+		<label><input type="checkbox"><span>blockchain</span></label>
 		<label><input type="checkbox"><span>c++</span></label>
 		<label><input type="checkbox"><span>design</span></label>
 		<label><input type="checkbox"><span>dft</span></label>
 		<label><input type="checkbox"><span>flask</span></label>
 		<label><input type="checkbox"><span>fortran</span></label>
 		<label><input type="checkbox"><span>frontend</span></label>
-		<label><input type="checkbox"><span>git</span></label>
+		<label><input type="checkbox"><span>idea</span></label>
 		<label><input type="checkbox"><span>java</span></label>
 		<label><input type="checkbox"><span>javascript</span></label>
 		<label><input type="checkbox"><span>joomla</span></label>
+		<label><input type="checkbox"><span>kotlin</span></label>
 		<label><input type="checkbox"><span>lua</span></label>
 		<label><input type="checkbox"><span>math</span></label>
 		<label><input type="checkbox"><span>ml</span></label>
+		<label><input type="checkbox"><span>nodejs</span></label>
 		<label><input type="checkbox"><span>openmp</span></label>
 		<label><input type="checkbox"><span>pandoc</span></label>
 		<label><input type="checkbox"><span>php</span></label>
@@ -211,6 +218,7 @@ div.tags {
 		<label><input type="checkbox"><span>python</span></label>
 		<label><input type="checkbox"><span>research</span></label>
 		<label><input type="checkbox"><span>tex</span></label>
+		<label><input type="checkbox"><span>torrent</span></label>
 		<label><input type="checkbox"><span>typescript</span></label>
 		<label><input type="checkbox"><span>wordpress</span></label>
 		</div>
@@ -225,7 +233,7 @@ div.tags {
 		<section class="global">
 			<h3><span>2003–Pr.</span> Institute of Physics, Southern Federal University</h3>
 			<div><i>Senior researcher</i></div>
-			<div>Scientific research in the fields of nonlinear dynamics and condensed matter physics.</div>
+			<div>Scientific researches in the fields of nonlinear dynamics and condensed matter physics.</div>
 		</section>
 		<section class="global">
 			<h3><span>2011–2018</span> Kuneri Ltd.</h3>
@@ -235,67 +243,106 @@ div.tags {
 	</section>
 	<section id="projects">
 		<h2>Projects</h2>
-		<section class="joomla php git">
-			<h3><span>2019-pr.</span> JED Checker contributor</h3>
-			<div>JED Checker is a code to validate Joomla! extensions before submitting them to the official Joomla! Extension Directory. I've implemented a new design, upgraded code to support Joomla!4.x, and added many new checks: validation of XML manifest files, language translation files, warning on the usage of deprecated API, etc.</div>
+		<section class="flask python typescript frontend backend">
+			<h3><span>2022–Pr.</span> XAFS Spectra Analyzer</h3>
+			<div>Developing an online tool to analyze experimental X-ray absorption spectra. Made with Python, Flask, BokehJS, and TypeScript.</div>
 		</section>
-		<section class="wordpress php frontend backend">
+		<section class="joomla php">
+			<h3><span>2019-Pr.</span> JED Checker contributor</h3>
+			<div><a href="https://extensions.joomla.org/extension/jedchecker/">JED Checker</a> is a tool to validate Joomla! extensions before submitting them to the official Joomla! Extension Directory.</div>
+			<div>I've implemented a new design, upgraded code to support Joomla!4.x, and added many new checks: validation of XML manifest files and language translation files, check file references, PHP syntax check, etc.</div>
+		</section>
+		<section class="wordpress php frontend backend nodejs">
 			<h3><span>2017–Pr.</span> PageSpeed Ninja</h3>
-			<div>Development of WordPress extension for frontend performance optimization.</div>
+			<div>The PageSpeed Ninja project allow to improve performance of WordPress-based website and get higher scores in the PageSpeed Insight test. It consists of <a href="https://pagespeed.ninja/">website checker</a>, <a href="https://wordpress.org/plugins/psn-pagespeed-ninja/">WordPress plugin</a>, and above-the-fold generation service (written in node.js).</div>
 		</section>
 		<section class="joomla php backend frontend">
-			<h3><span>2009–Pr.</span> MobileJoomla</h3>
-			<div>Development of the MobileJoomla extension to adapt and optimize websites for mobile phones.</div>
+			<h3><span>2009–Pr.</span> Mobile Joomla</h3>
+			<div>Development of the Mobile Joomla! extension that is the best way to adapt Joomla-based website for mobiles and get better performance.</div>
 		</section>
 
+		<section class="php c++">
+			<h3><span>2021</span> PHP language contributor</h3>
+			<div>Fixed processing of escaped quotes in the ini parser of the <a href="https://www.php.net/">PHP</a> language.</div>
+		</section>
+		<section class="php c++">
+			<h3><span>2020</span> sample_prof contributor</h3>
+			<div><a href="https://github.com/nikic/sample_prof">Sample_prof</a> is the profiler for PHP with line-level resolution.</div>
+			<div>I've fixed processing of cli options, numeration of lines in output, and added a check of nested runs.</div>
+		</section>
+		<section class="fortran idea kotlin">
+			<h3><span>2019</span> Fortran plugin contributor</h3>
+			<div>Fixed Fortran language lexer and parser issues in the <a href="https://plugins.jetbrains.com/plugin/9699-fortran">Fortran</a> Intellij IDEA plugin.</div>
+		</section>
+		<section class="javascript frontend">
+			<h3><span>2019</span> jQuery Mobile contributor</h3>
+			<div>Fixed security issue in the <a href="https://jquerymobile.com/">jQuery Mobile</a> framework.</div>
+		</section>
+		<section class="joomla php">
+			<h3><span>2019–2021</span> Joomla! CMS contributor</h3>
+			<div>Fixed several issues in the <a href="https://www.joomla.org/">Joomla! CMS</a>.</div>
+		</section>
 		<section class="fortran physics math research openmp">
 			<h3><span>2017–2018</span> NBODY6 contributor</h3>
-			<div>Developed code for parallel calculation of binary systems in the NBODY6 code by Sverre Aarseth.</div>
+			<div>Developed code for parallel calculation of binary systems in the <a href="https://people.ast.cam.ac.uk/~sverre/web/pages/nbody.htm">NBODY6</a> code by Sverre Aarseth.</div>
 		</section>
 		<section class="joomla tex pandoc lua design">
 			<h3><span>2015–2021</span> Mobile Joomla Insider's Guide</h3>
-			<div>A beautiful book made with Pandoc, LaTeX, and a set of Lua scripts.</div>
+			<div>A beautiful <a href="https://www.mobilejoomla.com/extension/documentation/mobile-joomla-insiders-guide.html">book</a> made with Pandoc, LaTeX, and a set of Lua scripts.</div>
 		</section>
-		<section class="php phpstorm java git">
+		<section class="php phpstorm java">
 			<h3><span>2015–2021</span> PHP RegExp Support plugin</h3>
-			<div>Development of <a target="_blank" href="https://github.com/dryabov/phpregexp">PHP RegExp Support</a> <a target="_blank" href="https://plugins.jetbrains.com/plugin/7746">plugin</a> for PhpStorm.</div>
+			<div>Development of the <a target="_blank" href="https://github.com/dryabov/phpregexp">PHP RegExp Support</a> <a target="_blank" href="https://plugins.jetbrains.com/plugin/7746">plugin</a> for PhpStorm IDE.</div>
 		</section>
-		<section class="php phpstorm git">
+		<section class="php phpstorm">
 			<h3><span>2015–2021</span> PhpStorm Stubs contributor</h3>
+			<div><a href="https://github.com/JetBrains/phpstorm-stubs">PhpStorm Stubs</a> is a collection of PHP function/class signatures, constant definitions, etc.</div>
 			<div>Fixed annotations for some built-in PHP functions, classes and global variables.</div>
 			<div>Analyzed sources (C language) of the <i>imagick</i> extension and updated PHP stub file correspondingly (marked deprecated methods and thrown exceptions).</div>
 		</section>
-		<section class="php phpstorm git java">
-			<h3><span>2015</span> PHP Inspections EA contributor</h3>
-			<div>Contributed and suggested ideas for PHP Inspections EA plugin for PhpStorm.</div>
+		<section class="php phpstorm java">
+			<h3><span>2015</span> PHP Inspections (EA Extended) contributor</h3>
+			<div><a href="https://plugins.jetbrains.com/plugin/7622-php-inspections-ea-extended-/">PHP Inspections (EA Extended)</a> is the best static code analysis plugin for PhpStorm IDE.</div>
+			<div>I've implemented new rules to check and fixed some issues.</div>
 		</section>
-		<section class="javascript git frontend">
+		<section class="javascript">
+			<h3><span>2015</span> DOMtastic contributor</h3>
+			<div><a href="https://github.com/webpro/DOMtastic">DOMtastic</a> is a small, fast, and modular DOM &amp; event library for modern browsers.</div>
+			<div>Added jQuery compatibility modules.</div>
+		</section>
+		<section class="cpp blockchain torrent frontend backend">
+			<h3><span>2014–2016</span> Twister contributor</h3>
+			<div><a href="http://twister.net.co/">Twister</a> is the fully decentralized P2P microblogging platform leveraging from the free software implementations of Bitcoin and BitTorrent protocols.</div>
+			<div>I actively contributed to the Twister core code (C/C++) and related projects (web-based interface, bots, desktop version).</div>
+		</section>
+		<section class="javascript frontend">
 			<h3><span>2013–2021</span> LazyLoadXT</h3>
-			<div>Extendible <a target="_blank" href="https://github.com/ressio/lazy-load-xt">jQuery plugin</a> for lazy image/video/iframe loading and other features like infinite scroll support, etc. </div>
+			<div><a target="_blank" href="https://github.com/ressio/lazy-load-xt">LazyLoadXT</a> is extendable jQuery plugin for lazy image/video/iframe loading and other features like infinite scroll support, etc. </div>
 		</section>
-		<section class="tex git">
+		<section class="tex">
 			<h3><span>2011–2020</span> rmathbr</h3>
-			<div>Development of the rmathbr package for LaTeX.</div>
+			<div>Repeating of math operators at the broken line and the new line in inline equations is used in Cyrillic mathematical typography</div>
+			<div>Developed <a href="https://ctan.org/pkg/rmathbr">rmathbr</a> package implements it for LaTeX (all TeX engines are supported: pdfTeX, XeTeX, and LuaTeX).</div>
 		</section>
 		<section class="c++ openmp math">
 			<h3><span>2008-2014</span> Normal Forms</h3>
-			<div>Development of C++ library for calculation of Hamiltonian normal form (parallelized, multi-precision, memory-efficient code).</div>
+			<div>Development of <a href="https://github.com/dryabov/normal-form">Normal Forms</a>, the C++ library for calculation of Hamiltonian normal form (parallelized, multi-precision, memory-efficient code).</div>
 		</section>
 		<section class="joomla php backend">
 			<h3><span>2007–2008</span> PDAbot</h3>
 			<div>Development of an extension for Joomla! CMS to adapt websites for mobile phones.</div>
 		</section>
-		<section class="joomla php git">
+		<section class="joomla php">
 			<h3><span>2006–2015</span> RusTypo</h3>
-			<div>Development of the Joomla! plugin for Russian typography improvements.</div>
+			<div>Development of the Joomla! <a href="https://github.com/dryabov/rustypo">plugin</a> for Russian typography improvements.</div>
 		</section>
 	</section>
 
 	<section id="membership">
 		<h2>Membership</h2>
 		<section class="joomla">
-			<h3><span>2022–Pr.</span> Joomla! Extension Directory Team</h3>
-			<div>Official member of the JED team, working on the JED Checker extension.</div>
+			<h3><span>2021–Pr.</span> Joomla! Extension Directory Team</h3>
+			<div>Official member of the <a href="https://volunteers.joomla.org/teams/extensions-directory-team">JED team</a>, working on the JED Checker extension.</div>
 		</section>
 		<section class="joomla">
 			<h3><span>2007–Pr.</span> Russian Joomla! Community</h3>
@@ -310,7 +357,7 @@ div.tags {
 			<div>Winner (the 3rd place) of the international "<a target="_blank" href="http://imat-relpred.yandex.ru/en/">Relevance Prediction Challenge</a>" contest by Yandex. The random forest method was used to predict the relevance of links for user requests.</div>
 		</section>
 		<section class="math ml">
-			<h3><span>2010</span> Internet Mathematics-2010</h3>
+			<h3><span>2010</span> Internet Mathematics 2010</h3>
 			<div>Winner (the 1st place) of the all-Russian "<a target="_blank" href="http://imat2010.yandex.ru/">Internet mathematics 2010</a>" contest by Yandex. The task was to predict future traffic jams from known historic data.</div>
 		</section>
 		<section class="physics">
@@ -324,14 +371,18 @@ div.tags {
 		<section class="global">
 			<h3><span>2009</span> PhD</h3>
 			<div>Southern Federal University</div>
+			<div><i>Physics &amp; Mathematics</i></div>
+			<div>Thesis: Investigation of some nonlinear mathematical models with discrete symmetry</div>
 		</section>
 		<section class="global">
 			<h3><span>2005</span> MSc</h3>
 			<div>Rostov State University</div>
+			<div><i>Physics</i></div>
 		</section>
 		<section class="global">
 			<h3><span>2003</span> BSc</h3>
 			<div>Rostov State University</div>
+			<div><i>Physics</i></div>
 		</section>
 	</section>
 
@@ -374,16 +425,22 @@ div.tags {
 		const publications = document.getElementById('publications');
 		[...publications.getElementsByTagName('li')].forEach(el => publications.classList.add(...el.classList.values()));
 
-		const skills = document.getElementById('skills');
+		const skills = document.getElementById('skills'),
+		      inputs = [...skills.getElementsByTagName('input')];
+		inputs.forEach(el => el.name = el.parentElement.innerText.toLowerCase());
 		skills.addEventListener('change', function () {
 			const add = [], remove = [];
-			[...skills.getElementsByTagName('input')].forEach(el => (el.checked ? add : remove).push(el.parentElement.innerText.toLowerCase()));
+			inputs.forEach(el => (el.checked ? add : remove).push(el.parentElement.innerText.toLowerCase()));
 			add.length    && document.body.classList.add(...add);
 			remove.length && document.body.classList.remove(...remove);
 		});
 		
-		// @todo get tags list from anchor
-		
+		const match = location.hash.match(/^#tags:([\w,\+]+)/);
+		if (match.length) {
+			const query = match[1].split(',').map(tag => 'input[name="' + tag + '"]').join(',');
+			[...document.querySelectorAll(query)].forEach(input => input.checked = true);
+			skills.dispatchEvent(new Event('change'));
+		}
 	});
 </script>
 </html>
