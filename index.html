@@ -439,9 +439,10 @@ div.tags {
 			inputs.forEach(el => (el.checked ? add : remove).push(el.parentElement.innerText.toLowerCase()));
 			add.length    && document.body.classList.add(...add);
 			remove.length && document.body.classList.remove(...remove);
+			history.replaceState('', '', add.length ? '#tags:' + add.join(',') : '#');
 		});
 		
-		const match = location.hash.match(/^#tags:([\w,\+]+)/);
+		const match = location.hash.match(/^#tags:([\w,\+\/]+)/);
 		if (match && match.length) {
 			const query = match[1].split(',').map(tag => 'input[name="' + tag + '"]').join(',');
 			[...document.querySelectorAll(query)].forEach(input => input.checked = true);
