@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
+	<title>Denis Ryabov</title>
 	<meta name="viewport" content="width=device-width">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -29,6 +30,7 @@ h1, h2, h3 {
 	font-weight: bold;
 	line-height: 1.2;
 	text-align: left;
+	break-after: avoid;
 }
 h1 {
 	font-size: 2.5rem;
@@ -45,6 +47,8 @@ p {
 	margin: 0;
 	padding-bottom: .25rem;
 	line-height: 1.2;
+	widows: 2;
+	orphans: 2;
 }
 ol, ul {
 	padding-left: 2rem;
@@ -135,6 +139,7 @@ section, li {
 	-webkit-backface-visibility: hidden;
 	-moz-backface-visibility:    hidden;
 	-ms-backface-visibility:     hidden;
+	break-inside: avoid;
 }
 section[id], li {
 	padding-left: 0;
@@ -193,8 +198,32 @@ div.tags {
 	font-size: smaller;
 	font-style: italic;
 }
-
-	
+@media print {
+	aside, main {
+		display: block;
+		width: 100%;
+	}
+	#skills > p {
+		display: none;
+	}
+	#skills span {
+		border: none;
+		padding: 0;
+	}
+	#skills input[type=checkbox]:checked + span {
+		font-weight: bold;
+		color: #333;
+		background-color: white;
+	}
+	a {
+		text-decoration: none;
+		color: #333;
+	}
+}
+@page {
+	size: auto;
+	margin: 0.5in 1in;
+}
 </style>
 </head>
 <body><aside>
