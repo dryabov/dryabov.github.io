@@ -129,9 +129,10 @@ main {
 
 section, li {
 	transform:  perspective(1rem) translateZ(-20rem) rotateX(90deg);
-	transition: transform .5s, max-height .5s ease-in;
+	transition: transform 1s, max-height 1s ease-in, opacity 1s ease-in;
 	transform-origin: top;
 	max-height: 0;
+	opacity: 0;
 	overflow: visible;
 	padding-left: 4rem;
 	position: relative;
@@ -180,8 +181,9 @@ body.wordpress  .wordpress,
 body:not(.support-js) *,
 .global {
 	transform: none;
-	transition: transform .5s, max-height .5s ease-out;
+	transition: transform 1s, max-height 1s ease-out, opacity 1s ease-out;
 	max-height: var(--max-height);
+	opacity: 1;
 }
 section > h3 > span {
 	position: absolute;
