@@ -140,11 +140,13 @@ section, li {
 	-webkit-backface-visibility: hidden;
 	-moz-backface-visibility:    hidden;
 	-ms-backface-visibility:     hidden;
-	break-inside: avoid;
 }
 section[id], li {
 	padding-left: 0;
 	padding-bottom: 0;
+}
+section > section, li {
+	break-inside: avoid;
 }
 main > section {
 	padding-bottom: 1rem;
