@@ -190,7 +190,7 @@ body:not(.support-js) *,
 section > h3 > span {
 	position: absolute;
 	width: 3.5rem;
-	left: 0;
+	margin-left: -3.5rem;
 	top: 2.1rem;
 	word-break: break-word;
 	font-size: 1.4rem;
@@ -203,9 +203,22 @@ div.tags {
 	font-style: italic;
 }
 @media print {
+	body {
+		margin-bottom: 0;
+	}
 	aside, main {
 		display: block;
 		width: 100%;
+		padding: 0;
+	}
+	aside {
+		float: left;
+		width: 35%;
+		min-height: 100vh;
+		margin-right: 4.5rem;
+	}
+	div.filler {
+		display: none;
 	}
 	#skills > p {
 		display: none;
